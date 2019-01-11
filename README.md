@@ -1,4 +1,4 @@
-# PostgreSQL
+# PostgreSQL (fork "ckolkman/vscode-postgres")
 
 This is a query tool for PostgreSQL databases.  While there is a database explorer it is _NOT_ meant for creating/dropping databases or tables.  The explorer is a visual aid for helping to craft your queries.
 
