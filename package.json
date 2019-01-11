@@ -325,6 +325,7 @@
     "build-preview-dev": "npx webpack --mode development",
     "build-preview": "npx webpack --mode production",
     "package": "vsce package --yarn"
+    "publish": "vsce publish --yarn"
   },
   "devDependencies": {
     "@types/csv-stringify": "^1.4.2",
