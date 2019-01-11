@@ -324,8 +324,8 @@
     "test": "npm run compile && node ./node_modules/vscode/bin/test",
     "build-preview-dev": "npx webpack --mode development",
     "build-preview": "npx webpack --mode production",
-    "package": "vsce package --yarn",
-    "publish": "vsce publish --yarn"
+    "package-extension": "vsce package --yarn",
+    "publish-extension": "vsce publish --yarn"
   },
   "devDependencies": {
     "@types/csv-stringify": "^1.4.2",
