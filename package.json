@@ -1,13 +1,13 @@
 {
-  "name": "vscode-postgres",
+  "name": "postgres",
   "displayName": "PostgreSQL",
   "description": "PostgreSQL Management Tool",
   "version": "1.1.4",
-  "publisher": "ckolkman",
+  "publisher": "bout",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Borvik/vscode-postgres.git"
+    "url": "https://github.com/hernad/vscode-postgres.git"
   },
   "engines": {
     "vscode": "^1.30.0"
