@@ -46,7 +46,7 @@ export class ResultView {
         enableFindWidget: true,
         ...ResultView.getWebviewOptions(resource)
       });
-    
+
     return new ResultView(view, resource);
   }
 
@@ -119,7 +119,7 @@ export class ResultView {
   }
 
   private static getViewTitle(resource: vscode.Uri): string {
-    return 'Results: ' + path.basename(resource.toString());
+    return 'Rezultati: ' + path.basename(resource.toString());
   }
 
   private async doUpdate(): Promise<void> {
@@ -137,11 +137,12 @@ export class ResultView {
     this.editor.webview.html = html;
   }
 
-  private static getWebviewOptions(resource: vscode.Uri): vscode.WebviewOptions {
+  private static getWebviewOptions(resource: vscode.Uri): vscode.WebviewPanelOptions & vscode.WebviewOptions {
     let localRoot = vscode.Uri.file(Global.context.asAbsolutePath('media'));
     return {
       enableScripts: true,
       enableCommandUris: true,
+      retainContextWhenHidden: true,
       localResourceRoots: [
         localRoot
       ]
