@@ -2,7 +2,7 @@
   "name": "postgres",
   "displayName": "PostgreSQL.bout",
   "description": "PostgreSQL Management Tool",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "publisher": "bout",
   "keywords": ["eShell", "PSQL"],
   "license": "MIT",
