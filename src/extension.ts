@@ -16,9 +16,6 @@ import { ResultsManager } from './resultsview/resultsManager';
 // your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
   
-  // Use the console to output diagnostic information (console.log) and errors (console.error)
-  // This line of code will only be executed once when your extension is activated
-  console.log('Congratulations, your extension "vscode-postgres" is now active!');
   let languageClient: PostgreSQLLanguageClient = new PostgreSQLLanguageClient(context);
   let treeProvider: PostgreSQLTreeDataProvider = PostgreSQLTreeDataProvider.getInstance(context);
   Global.context = context;
