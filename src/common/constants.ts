@@ -1,6 +1,6 @@
 'use strict';
 
 export class Constants {
-  public static ExtensionId = 'vscode-postgres';
+  public static ExtensionId = 'postgres';
   public static GlobalStateKey = 'postgresql.connections';
 }
