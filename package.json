@@ -2,7 +2,7 @@
   "name": "postgres",
   "displayName": "PostgreSQL.bout",
   "description": "PostgreSQL Management Tool",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "publisher": "bout",
   "keywords": ["eShell", "PSQL"],
   "license": "MIT",
@@ -11,7 +11,7 @@
     "url": "https://github.com/hernad/vscode-postgres.git"
   },
   "engines": {
-    "vscode": "^1.31.0"
+    "vscode": "^1.30.0"
   },
   "categories": [
     "Other"
