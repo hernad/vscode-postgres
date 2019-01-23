@@ -21,7 +21,7 @@ export function generateResultsHtml(sourceUri: vscode.Uri, results: QueryResults
     <head>
       <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
       <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src vscode-resource: https: data:; media-src vscode-resource: https: data:; script-src 'nonce-${nonce}'; style-src vscode-resource: 'unsafe-inline' https: data:; font-src vscode-resource: https: data:;">
-      <meta id="vscode-postgres-results-data"
+      <meta id="postgres-results-data"
         data-settings=""
         data-state="${JSON.stringify(state || {}).replace(/"/g, '&quot;')}" />
       <script src="${pageScript}" nonce="${nonce}"></script>
@@ -51,39 +51,39 @@ function getStyles(nonce) {
       padding: 0;
     }
 
-    pre.vscode-postgres-result {
+    pre.postgres-result {
       margin: 5px;
     }
     
-    pre.vscode-postgres-result-insert {
+    pre.postgres-result-insert {
     
     }
     
-    pre.vscode-postgres-result-update {
+    pre.postgres-result-update {
       
     }
     
-    pre.vscode-postgres-result-create {
+    pre.postgres-result-create {
       
     }
     
-    pre.vscode-postgres-result-delete {
+    pre.postgres-result-delete {
       
     }
     
-    pre.vscode-postgres-result-explain {
+    pre.postgres-result-explain {
       
     }
     
-    pre.vscode-postgres-result-generic {
+    pre.postgres-result-generic {
       
     }
     
-    pre.vscode-postgres-result-message {
+    pre.postgres-result-message {
       
     }
 
-    pre.vscode-postgres-result-select {
+    pre.postgres-result-select {
       
     }
 
@@ -168,19 +168,19 @@ function generateDeleteResults(result: QueryResults): string {
 
 function getRowCountResult(rowCount: number, text: string, preClass: string): string {
   let rowOrRows = rowCount === 1 ? 'row' : 'rows';
-  return `<pre class="vscode-postgres-result vscode-postgres-result-${preClass}">${rowCount} ${rowOrRows} ${text}</pre>`;
+  return `<pre class="postgres-result postgres-result-${preClass}">${rowCount} ${rowOrRows} ${text}</pre>`;
 }
 
 function generateExplainResult(result: QueryResults): string {
-  return `<pre class="vscode-postgres-result vscode-postgres-result-explain">${result.rows.join("\n")}</pre>`;
+  return `<pre class="postgres-result postgres-result-explain">${result.rows.join("\n")}</pre>`;
 }
 
 function generateGenericResult(result: QueryResults): string {
-  return `<pre class="vscode-postgres-result vscode-postgres-result-generic">${JSON.stringify(result)}</pre>`;
+  return `<pre class="postgres-result postgres-result-generic">${JSON.stringify(result)}</pre>`;
 }
 
 function generateMessage(result: QueryResults): string {
-  return `<pre class="vscode-postgres-result vscode-postgres-result-message">${result.message}</pre>`;
+  return `<pre class="postgres-result postgres-result-message">${result.message}</pre>`;
 }
 
 function generateSelectResult(result: QueryResults): string {

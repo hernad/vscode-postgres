@@ -22,7 +22,7 @@ export class FunctionNode implements INode {
       label: label,
       tooltip: tooltip,
       collapsibleState: TreeItemCollapsibleState.None,
-      contextValue: 'vscode-postgres.tree.function',
+      contextValue: 'postgres.tree.function',
       iconPath: {
         light: path.join(__dirname, `../../resources/light/function.svg`),
         dark: path.join(__dirname, `../../resources/dark/function.svg`)
