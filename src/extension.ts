@@ -15,7 +15,7 @@ import { ResultsManager } from './resultsview/resultsManager';
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
-  
+
   let languageClient: PostgreSQLLanguageClient = new PostgreSQLLanguageClient(context);
   let treeProvider: PostgreSQLTreeDataProvider = PostgreSQLTreeDataProvider.getInstance(context);
   Global.context = context;
@@ -45,7 +45,7 @@ export async function activate(context: vscode.ExtensionContext) {
   });
 
   const configFS = new ConfigFS();
-  context.subscriptions.push(vscode.workspace.registerFileSystemProvider('postgres-config', configFS, {isCaseSensitive: true}));
+  context.subscriptions.push(vscode.workspace.registerFileSystemProvider('postgres-config', configFS, { isCaseSensitive: true }));
 
   // EditorState.connection = null;
   // if (vscode.window && vscode.window.activeTextEditor) {
@@ -53,6 +53,21 @@ export async function activate(context: vscode.ExtensionContext) {
   //   await EditorState.setNonActiveConnection(doc, null);
   //   EditorState.getInstance().onDidChangeActiveTextEditor(vscode.window.activeTextEditor);
   // }
+
+  let api = {
+    sum(a, b) {
+      return a + b;
+    },
+    mul(a, b) {
+      return a * b;
+    },
+    context() {
+      return context;
+    }
+  };
+  return api;
+
+
 }
 
 // this method is called when your extension is deactivated
