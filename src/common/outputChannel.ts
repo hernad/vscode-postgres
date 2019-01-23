@@ -15,12 +15,16 @@ export class OutputChannel {
   }
 
   public static displayResults(uri: vscode.Uri, title: string, res: QueryResults[]): void {
-    let viewColumn = OutputChannel.getViewColumn();
+    // let viewColumn = OutputChannel.getViewColumn();
+    // hernad: ne praviti nikakav novi output kanal
+    let viewColumn = undefined;
     Global.ResultManager.showResults(uri, viewColumn, res);
   }
 
+  /*
   private static getViewColumn(): vscode.ViewColumn {
     const resourceColumn = (vscode.window.activeTextEditor && vscode.window.activeTextEditor.viewColumn) || vscode.ViewColumn.One;
     return resourceColumn + 1;
   }
+  */
 }
