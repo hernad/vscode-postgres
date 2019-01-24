@@ -1,8 +1,8 @@
 {
 	"name": "postgres",
 	"displayName": "PostgreSQL.bout",
-	"description": "PostgreSQL Management Tool",
-	"version": "1.2.2",
+	"description": "PostgreSQL menadžer",
+	"version": "1.3.0",
 	"publisher": "bout",
 	"keywords": [
 		"eShell",
@@ -117,7 +117,7 @@
 		"commands": [
 			{
 				"command": "postgres.addConnection",
-				"title": "Add Connection",
+				"title": "Dodaj konkeciju",
 				"icon": {
 					"light": "resources/light/add.svg",
 					"dark": "resources/dark/add.svg"
@@ -126,52 +126,57 @@
 			},
 			{
 				"command": "postgres.deleteConnection",
-				"title": "Delete Connection",
+				"title": "Briši konekciju",
 				"category": "PostgreSQL"
 			},
 			{
 				"command": "postgres.selectConnection",
-				"title": "Select Connection",
+				"title": "Odaberi konekciju",
+				"category": "PostgreSQL"
+			},
+			{
+				"command": "postgres.selectDatabase",
+				"title": "Odaberi bazu",
 				"category": "PostgreSQL"
 			},
 			{
 				"command": "postgres.renameConnection",
-				"title": "Rename Connection",
+				"title": "Preimenuj konekciju",
 				"category": "PostgreSQL"
 			},
 			{
 				"command": "postgres.editConnection",
-				"title": "Edit Connection",
+				"title": "Izmijeni konekciju",
 				"category": "PostgreSQL"
 			},
 			{
 				"command": "postgres.newQuery",
-				"title": "New Query",
+				"title": "Novi upit",
 				"category": "PostgreSQL"
 			},
 			{
 				"command": "postgres.refresh",
-				"title": "Refresh Items",
+				"title": "Osvježi stavke",
 				"category": "PostgreSQL"
 			},
 			{
 				"command": "postgres.selectTop",
-				"title": "Select Top...",
+				"title": "Odaberi top...",
 				"category": "PostgreSQL"
 			},
 			{
 				"command": "postgres.selectTop1000",
-				"title": "Select Top 1000",
+				"title": "Odaberi top 1000",
 				"category": "PostgreSQL"
 			},
 			{
 				"command": "postgres.runQuery",
-				"title": "Run Query",
+				"title": "Pokreni upit",
 				"category": "PostgreSQL"
 			},
 			{
 				"command": "postgres.saveResult",
-				"title": "Save Result",
+				"title": "Snimi rezultat",
 				"category": "PostgreSQL",
 				"icon": {
 					"light": "./resources/light/save.svg",
