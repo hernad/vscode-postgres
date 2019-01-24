@@ -24,7 +24,12 @@ export class selectDatabaseCommand extends BaseCommand {
 
     let databases: string[] = [];
     try {
-      const res = await connection.query('SELECT datname FROM pg_database WHERE datistemplate = false;');
+      let notPostgres = '';
+      if (!inEditor) {
+        // van editora ne trebamo postgres
+        notPostgres = "AND not datname='postgres'";
+      }
+      const res = await connection.query(`SELECT datname FROM pg_database WHERE datistemplate = false ${notPostgres};`);
       databases = res.rows.map<string>(database => database.datname);
     } finally {
       await connection.end();
