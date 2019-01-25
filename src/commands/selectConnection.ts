@@ -32,12 +32,16 @@ export class selectConnectionCommand extends BaseCommand {
     });
     */
 
+
     for (const k in connections) {
       if (connections.hasOwnProperty(k)) {
-        hosts.push({
-          label: connections[k].label || connections[k].host,
-          connection_key: k
-        });
+        // non-admin connections
+        if (!/.*_admin/.test(connections[k].label)) {
+          hosts.push({
+            label: connections[k].label || connections[k].host,
+            connection_key: k
+          })
+        };
       }
     }
 
