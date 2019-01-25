@@ -12,14 +12,13 @@ import { ConnectionQuickPickItem } from "../common/IConnQuickPick";
 export class selectConnectionCommand extends BaseCommand {
   async run() {
     // can we even select a connection it gets stored against a document uri
-    
-  /*
+
+    let inEditor: boolean = true;
+
     if (!vscode.window || !vscode.window.activeTextEditor || !vscode.window.activeTextEditor.document || !vscode.window.activeTextEditor.document.uri) {
-      // alert and return;
-      vscode.window.showWarningMessage('Unable to select a connection - a document is not active');
-      return;
+      inEditor = false;
     }
-  */
+
 
     let connections = Global.context.globalState.get<{ [key: string]: IConnection }>(Constants.GlobalStateKey);
     if (!connections) connections = {};
@@ -42,8 +41,20 @@ export class selectConnectionCommand extends BaseCommand {
       }
     }
 
-    const hostToSelect = await vscode.window.showQuickPick(hosts, {placeHolder: 'Select a connection', matchOnDetail: false});
+    const hostToSelect = await vscode.window.showQuickPick(hosts, { placeHolder: 'Odaberi konekciju', matchOnDetail: false });
     if (!hostToSelect) return;
+
+    if (!inEditor) {
+      Global.Configuration.update("defaultConnection", hostToSelect.label, vscode.ConfigurationTarget.Global)
+        .then(() => {
+          vscode.window.showInformationMessage(`Tekuća konekcija: ${hostToSelect.label}`);
+          setTimeout(() =>
+            vscode.commands.executeCommand('postgres.selectDatabase'),
+            700);
+        });
+      return;
+    }
+
 
     if (!hostToSelect.is_new_selector) {
       let connection: IConnection = Object.assign({}, connections[hostToSelect.connection_key]);
@@ -54,6 +65,7 @@ export class selectConnectionCommand extends BaseCommand {
       await vscode.commands.executeCommand('postgres.selectDatabase');
       return;
     }
+
 
     let result = await vscode.commands.executeCommand('postgres.addConnection');
     if (!result) return;
