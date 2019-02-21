@@ -3,7 +3,7 @@
 	"displayName": "PostgreSQL.bout",
 	"description": "PostgreSQL menadžer",
 	"version": "1.4.1",
-	"publisher": "bout",
+	"publisher": "bring-out",
 	"keywords": [
 		"eShell",
 		"PSQL"
