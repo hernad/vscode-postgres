@@ -1,9 +1,9 @@
 {
 	"name": "postgres",
-	"displayName": "PostgreSQL.bout",
+	"displayName": "PSQL bringout",
 	"description": "PostgreSQL menadžer",
 	"version": "1.4.1",
-	"publisher": "bring-out",
+	"publisher": "bringout",
 	"keywords": [
 		"eShell",
 		"PSQL"
