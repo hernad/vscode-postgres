@@ -2,7 +2,7 @@
 	"name": "postgres",
 	"displayName": "PSQL bringout",
 	"description": "PostgreSQL menadžer",
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"publisher": "bringout",
 	"keywords": [
 		"eShell",
