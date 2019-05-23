@@ -2,7 +2,7 @@
 	"name": "postgres",
 	"displayName": "PSQL bringout",
 	"description": "PostgreSQL menadžer",
-	"version": "1.4.1",
+	"version": "1.4.2",
 	"publisher": "bringout",
 	"keywords": [
 		"eShell",
@@ -310,7 +310,7 @@
 			"activitybar": [
 				{
 					"id": "postgres-explorer",
-					"title": "PostgreSQL Explorer",
+					"title": "PSQL bringout",
 					"icon": "resources/postgres-explorer.svg"
 				}
 			]

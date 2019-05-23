@@ -54,19 +54,6 @@ export async function activate(context: vscode.ExtensionContext) {
   //   EditorState.getInstance().onDidChangeActiveTextEditor(vscode.window.activeTextEditor);
   // }
 
-  let api = {
-    sum(a, b) {
-      return a + b;
-    },
-    mul(a, b) {
-      return a * b;
-    },
-    context() {
-      return context;
-    }
-  };
-  return api;
-
 
 }
 
