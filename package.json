@@ -2,7 +2,7 @@
 	"name": "postgres",
 	"displayName": "PSQL bringout DEV",
 	"description": "PostgreSQL menadžer DEV",
-	"version": "1.5.0",
+	"version": "1.5.1",
 	"publisher": "bringout",
 	"keywords": [
 		"eShell",
@@ -89,14 +89,14 @@
 		},
 		"keybindings": [
 		  {
-			"command": "vscode-postgres.runQuery",
+			"command": "postgres.runQuery",
 			"key": "f5",
 			"when": "editorLangId == postgres"
 		  }
 		],
 		"commands": [
 		  {
-			"command": "vscode-postgres.addConnection",
+			"command": "postgres.addConnection",
 			"title": "Add Connection",
 			"icon": {
 			  "light": "resources/light/add.svg",
@@ -105,52 +105,52 @@
 			"category": "PostgreSQL"
 		  },
 		  {
-			"command": "vscode-postgres.deleteConnection",
+			"command": "postgres.deleteConnection",
 			"title": "Delete Connection",
 			"category": "PostgreSQL"
 		  },
 		  {
-			"command": "vscode-postgres.selectConnection",
+			"command": "postgres.selectConnection",
 			"title": "Select Connection",
 			"category": "PostgreSQL"
 		  },
 		  {
-			"command": "vscode-postgres.renameConnection",
+			"command": "postgres.renameConnection",
 			"title": "Rename Connection",
 			"category": "PostgreSQL"
 		  },
 		  {
-			"command": "vscode-postgres.editConnection",
+			"command": "postgres.editConnection",
 			"title": "Edit Connection",
 			"category": "PostgreSQL"
 		  },
 		  {
-			"command": "vscode-postgres.newQuery",
+			"command": "postgres.newQuery",
 			"title": "New Query",
 			"category": "PostgreSQL"
 		  },
 		  {
-			"command": "vscode-postgres.refresh",
+			"command": "postgres.refresh",
 			"title": "Refresh Items",
 			"category": "PostgreSQL"
 		  },
 		  {
-			"command": "vscode-postgres.selectTop",
+			"command": "postgres.selectTop",
 			"title": "Select Top...",
 			"category": "PostgreSQL"
 		  },
 		  {
-			"command": "vscode-postgres.selectTop1000",
+			"command": "postgres.selectTop1000",
 			"title": "Select Top 1000",
 			"category": "PostgreSQL"
 		  },
 		  {
-			"command": "vscode-postgres.runQuery",
+			"command": "postgres.runQuery",
 			"title": "Run Query",
 			"category": "PostgreSQL"
 		  },
 		  {
-			"command": "vscode-postgres.saveResult",
+			"command": "postgres.saveResult",
 			"title": "Save Result",
 			"category": "PostgreSQL",
 			"icon": {
@@ -162,121 +162,121 @@
 		"menus": {
 		  "editor/title": [
 			{
-			  "command": "vscode-postgres.saveResult",
+			  "command": "postgres.saveResult",
 			  "when": "vscodePostgresResultFocus",
 			  "group": "navigation"
 			}
 		  ],
 		  "view/title": [
 			{
-			  "command": "vscode-postgres.addConnection",
+			  "command": "postgres.addConnection",
 			  "when": "view == postgres",
 			  "group": "navigation@1"
 			}
 		  ],
 		  "commandPalette": [
 			{
-			  "command": "vscode-postgres.runQuery",
+			  "command": "postgres.runQuery",
 			  "when": "editorLangId == postgres"
 			},
 			{
-			  "command": "vscode-postgres.runQuery",
+			  "command": "postgres.runQuery",
 			  "when": "editorLangId != postgres && editorHasSelection && !editorHasMultipleSelections"
 			},
 			{
-			  "command": "vscode-postgres.selectTop",
-			  "when": "config.vscode-postgres.never"
+			  "command": "postgres.selectTop",
+			  "when": "config.postgres.never"
 			},
 			{
-			  "command": "vscode-postgres.selectTop1000",
-			  "when": "config.vscode-postgres.never"
+			  "command": "postgres.selectTop1000",
+			  "when": "config.postgres.never"
 			},
 			{
-			  "command": "vscode-postgres.saveResult",
-			  "when": "config.vscode-postgres.never"
+			  "command": "postgres.saveResult",
+			  "when": "config.postgres.never"
 			}
 		  ],
 		  "editor/context": [
 			{
-			  "command": "vscode-postgres.runQuery",
+			  "command": "postgres.runQuery",
 			  "when": "editorLangId != postgres && editorHasSelection && !editorHasMultipleSelections",
 			  "group": "navigation"
 			},
 			{
-			  "command": "vscode-postgres.runQuery",
+			  "command": "postgres.runQuery",
 			  "when": "editorLangId == postgres",
 			  "group": "navigation"
 			}
 		  ],
 		  "view/item/context": [
 			{
-			  "command": "vscode-postgres.editConnection",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.connection",
+			  "command": "postgres.editConnection",
+			  "when": "view == postgres && viewItem == postgres.tree.connection",
 			  "group": "postgres@2"
 			},
 			{
-			  "command": "vscode-postgres.deleteConnection",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.connection",
+			  "command": "postgres.deleteConnection",
+			  "when": "view == postgres && viewItem == postgres.tree.connection",
 			  "group": "postgres@2"
 			},
 			{
-			  "command": "vscode-postgres.renameConnection",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.connection",
+			  "command": "postgres.renameConnection",
+			  "when": "view == postgres && viewItem == postgres.tree.connection",
 			  "group": "postgres@2"
 			},
 			{
-			  "command": "vscode-postgres.refresh",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.connection",
+			  "command": "postgres.refresh",
+			  "when": "view == postgres && viewItem == postgres.tree.connection",
 			  "group": "postgres@1"
 			},
 			{
-			  "command": "vscode-postgres.refresh",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.schema",
+			  "command": "postgres.refresh",
+			  "when": "view == postgres && viewItem == postgres.tree.schema",
 			  "group": "postgres@1"
 			},
 			{
-			  "command": "vscode-postgres.refresh",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.database",
+			  "command": "postgres.refresh",
+			  "when": "view == postgres && viewItem == postgres.tree.database",
 			  "group": "postgres@1"
 			},
 			{
-			  "command": "vscode-postgres.refresh",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.table",
+			  "command": "postgres.refresh",
+			  "when": "view == postgres && viewItem == postgres.tree.table",
 			  "group": "postgres@1"
 			},
 			{
-			  "command": "vscode-postgres.refresh",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.function-folder",
+			  "command": "postgres.refresh",
+			  "when": "view == postgres && viewItem == postgres.tree.function-folder",
 			  "group": "postgres@1"
 			},
 			{
-			  "command": "vscode-postgres.newQuery",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.connection",
+			  "command": "postgres.newQuery",
+			  "when": "view == postgres && viewItem == postgres.tree.connection",
 			  "group": "postgres@1"
 			},
 			{
-			  "command": "vscode-postgres.newQuery",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.database",
+			  "command": "postgres.newQuery",
+			  "when": "view == postgres && viewItem == postgres.tree.database",
 			  "group": "postgres@1"
 			},
 			{
-			  "command": "vscode-postgres.newQuery",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.table",
+			  "command": "postgres.newQuery",
+			  "when": "view == postgres && viewItem == postgres.tree.table",
 			  "group": "postgres@1"
 			},
 			{
-			  "command": "vscode-postgres.newQuery",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.column",
+			  "command": "postgres.newQuery",
+			  "when": "view == postgres && viewItem == postgres.tree.column",
 			  "group": "postgres@1"
 			},
 			{
-			  "command": "vscode-postgres.selectTop",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.table",
+			  "command": "postgres.selectTop",
+			  "when": "view == postgres && viewItem == postgres.tree.table",
 			  "group": "postgres@2"
 			},
 			{
-			  "command": "vscode-postgres.selectTop1000",
-			  "when": "view == postgres && viewItem == vscode-postgres.tree.table",
+			  "command": "postgres.selectTop1000",
+			  "when": "view == postgres && viewItem == postgres.tree.table",
 			  "group": "postgres@2"
 			}
 		  ]
@@ -295,7 +295,7 @@
 			{
 			  "id": "postgres",
 			  "name": "PostgreSQL",
-			  "when": "config.vscode-postgres.showExplorer == true"
+			  "when": "config.postgres.showExplorer == true"
 			}
 		  ]
 		}
