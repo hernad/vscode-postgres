@@ -3,6 +3,30 @@ All notable changes to the "vscode-postgres" extension will be documented in thi
 
 ## [Unreleased]
 
+## [1.1.11] - 2019-08-10
+### Fixed
+- Sidebar icon has been updated and should now size correctly for vscode 1.37.0.
+
+## [1.1.10] - 2019-04-12
+### Fixed
+- Add DB connection process now handles more issues with connecting to a possibly secured `postgres` database (issue #97).
+
+## [1.1.9] - 2019-03-17
+### Changed
+- Add DB connection process has been altered to be more user friendly. Also fixes ssl cert issues (issue #66).
+
+## [1.1.8] - 2019-03-08
+### Fixed
+- PG 11 Version issues for language server (issue #92).
+
+## [1.1.7] - 2019-03-05
+### Fixed
+- Delete results now properly show RETURNING data (issue #91).
+
+## [1.1.6] - 2018-11-26
+### Fixed
+- Syntax highlighting when first character of query is a space (issue #79) by @votagus.
+
 ## [1.1.5] - 2018-11-26
 ### Added
 - Capability to better separate main queries by pg version

@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { IConnection } from './IConnection';
-import PostgreSQLLanguageClient from '../language/client';
+// import PostgreSQLLanguageClient from '../language/client';
 import { Global } from './global';
 import { Constants } from './constants';
 import { Database } from './database';
@@ -12,14 +12,14 @@ export class EditorState {
   private statusBarDatabase: vscode.StatusBarItem;
   private statusBarServer: vscode.StatusBarItem;
 
-  constructor(private readonly languageClient: PostgreSQLLanguageClient) {
+  constructor() {
     vscode.window.onDidChangeActiveTextEditor(this.onDidChangeActiveTextEditor, this);
     vscode.workspace.onDidCloseTextDocument(this.onDidCloseTextDocument, this);
     vscode.workspace.onDidOpenTextDocument(this.onDidOpenTextDocument, this);
   }
 
-  static getInstance(languageClient?: PostgreSQLLanguageClient) {
-    if (!EditorState._instance && languageClient) EditorState._instance = new EditorState(languageClient);
+  static getInstance() {
+    if (!EditorState._instance) EditorState._instance = new EditorState();
     return EditorState._instance;
   }
 
@@ -102,7 +102,7 @@ export class EditorState {
 
   onDidChangeActiveTextEditor(e: vscode.TextEditor) {
     let conn: IConnection = e && e.document && e.document.uri ? this.metadata.get(e.document.uri.toString()) : null;
-    this.languageClient.setConnection(conn);
+    // this.languageClient.setConnection(conn);
     if (conn) {
       // set the status buttons
       this.setStatusButtons(conn);

@@ -1,6 +1,6 @@
 import BaseCommand from "../common/baseCommand";
 import * as vscode from 'vscode';
-import { PostgreSQLTreeDataProvider } from "../tree/treeProvider";
+// import { PostgreSQLTreeDataProvider } from "../tree/treeProvider";
 import { TableNode } from "../tree/tableNode";
 import { EditorState } from "../common/editorState";
 import { Database } from "../common/database";

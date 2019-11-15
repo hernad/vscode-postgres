@@ -1,5 +1,5 @@
 import BaseCommand from "../common/baseCommand";
-import * as vscode from 'vscode';
+// import * as vscode from 'vscode';
 import { PostgreSQLTreeDataProvider } from "../tree/treeProvider";
 import { INode } from "../tree/INode";
 

@@ -4,7 +4,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
-import PostgreSQLLanguageClient from './language/client';
+// import PostgreSQLLanguageClient from './language/client';
 import { PostgreSQLTreeDataProvider } from './tree/treeProvider';
 import { Global } from './common/global';
 import { EditorState } from './common/editorState';
@@ -16,10 +16,10 @@ import { ResultsManager } from './resultsview/resultsManager';
 // your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
 
-  let languageClient: PostgreSQLLanguageClient = new PostgreSQLLanguageClient(context);
+  //let languageClient: PostgreSQLLanguageClient = new PostgreSQLLanguageClient(context);
   let treeProvider: PostgreSQLTreeDataProvider = PostgreSQLTreeDataProvider.getInstance(context);
   Global.context = context;
-  EditorState.getInstance(languageClient);
+  //EditorState.getInstance(languageClient);
 
   try {
     let commandPath = context.asAbsolutePath(path.join('out', 'commands'));

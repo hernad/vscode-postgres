@@ -1,5 +1,5 @@
 import BaseCommand from "../common/baseCommand";
-import * as vscode from 'vscode';
+// import * as vscode from 'vscode';
 import { IConnection } from "../common/IConnection";
 import { EditorState } from "../common/editorState";
 import { Global } from "../common/global";
