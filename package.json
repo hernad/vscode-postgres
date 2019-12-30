@@ -2,11 +2,10 @@
 	"name": "postgres",
 	"displayName": "PSQL bringout [eShell]",
 	"description": "PostgreSQL menadžer [eShell 1.41]",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"publisher": "bringout",
 	"keywords": [
-		"eShell",
-		"PSQL"
+		"eShell"
 	],
 	"license": "MIT",
 	"repository": {
