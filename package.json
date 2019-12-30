@@ -2,7 +2,7 @@
 	"name": "postgres",
 	"displayName": "PSQL bringout [eShell]",
 	"description": "PostgreSQL menadžer [eShell 1.41]",
-	"version": "2.0.2",
+	"version": "2.0.4",
 	"publisher": "bringout",
 	"keywords": [
 		"eShell"
@@ -328,10 +328,5 @@
 		"easyxml": "^2.0.1",
 		"pg": "^7.4.3",
 		"uuid": "^3.3.2"
-	},
-	"__metadata": {
-		"id": "5be97d41-4722-4956-98e4-e56ae2a448f5",
-		"publisherDisplayName": "bring.out doo Sarajevo",
-		"publisherId": "c96dd534-07ec-488e-ba11-b474391a086c"
 	}
 }
