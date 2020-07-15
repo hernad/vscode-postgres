@@ -1,19 +1,19 @@
 {
 	"name": "postgres",
 	"displayName": "PSQL bringout [eShell]",
-	"description": "PostgreSQL menadžer [eShell 1.41]",
-	"version": "2.0.4",
+	"description": "PostgreSQL menadžer [eShell]",
+	"version": "2.0.5",
 	"publisher": "bringout",
 	"keywords": [
 		"eShell"
 	],
+	"engines": {
+		"vscode": "^1.47.0"
+	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/hernad/vscode-postgres.git"
-	},
-	"engines": {
-		"vscode": "^1.41.0"
 	},
 	"categories": [
 		"Other"
@@ -303,8 +303,6 @@
 		"vscode:prepublish": "npm run build-preview && npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "npm run build-preview-dev && tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "npm run compile && node ./node_modules/vscode/bin/test",
 		"build-preview-dev": "npx webpack --mode development",
 		"build-preview": "npx webpack --mode production",
 		"extension-package": "vsce package --yarn",
@@ -318,8 +316,7 @@
 		"@types/pg": "^7.4.10",
 		"@types/uuid": "^3.4.4",
 		"ts-loader": "^4.5.0",
-		"typescript": "^2.9.2",
-		"vscode": "^1.1.30",
+		"typescript": "^3.9.6",
 		"webpack": "^4.29.6",
 		"webpack-cli": "^3.3.0"
 	},
