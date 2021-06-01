@@ -62,8 +62,8 @@ export class saveResultCommand extends BaseCommand {
         csv(results[resultIndex].rows, {
           header: true,
           columns: columns,
-          formatters: {
-            bool: (value: boolean):string => {
+          cast: {
+            boolean: (value: boolean):string => {
               return value ? 'true' : 'false';
             }
           }
@@ -72,6 +72,7 @@ export class saveResultCommand extends BaseCommand {
           resolve(output);
         });
       });
+
     }
 
     try {

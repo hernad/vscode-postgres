@@ -11,11 +11,9 @@
     "sourceMap": true,
     "rootDir": "src"
   },
-  "include": [
-    "typings"
-  ],
   "exclude": [
     "node_modules",
-    ".vscode-test"
+    ".vscode-test",
+    "src/test"
   ]
 }
